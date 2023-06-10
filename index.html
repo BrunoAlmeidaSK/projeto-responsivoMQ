@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <title>Media Query</title>
 </head>
+
 <body>
-    <header>
+    <header onresize="mudouTamanho()">
         <h1>Meu site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
         <menu id="itens">
@@ -28,31 +30,57 @@
         <section>
             <h2>Testando Media Querie</h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, ex repudiandae aliquam possimus eveniet qui expedita nulla, consequatur a totam eius consectetur! Fuga illum nam perferendis, magnam minus praesentium reiciendis!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eligendi similique ipsam, explicabo nihil nobis omnis facilis deserunt maxime pariatur exercitationem praesentium sit, repellendus, veniam hic fugit. Nihil, repudiandae id.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, ex repudiandae aliquam possimus eveniet
+                qui expedita nulla, consequatur a totam eius consectetur! Fuga illum nam perferendis, magnam minus
+                praesentium reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eligendi similique ipsam, explicabo nihil
+                nobis omnis facilis deserunt maxime pariatur exercitationem praesentium sit, repellendus, veniam hic
+                fugit. Nihil, repudiandae id.
             </p>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur consequuntur corporis atque vel in accusamus doloribus sequi ea, officiis cupiditate ipsa adipisci nam aspernatur quas iste minima. Provident, necessitatibus quidem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum esse ex aspernatur labore illo nesciunt molestiae nam beatae, impedit dolorem, sequi error soluta quo vitae reiciendis ducimus magni officia!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur consequuntur corporis atque vel in
+                accusamus doloribus sequi ea, officiis cupiditate ipsa adipisci nam aspernatur quas iste minima.
+                Provident, necessitatibus quidem.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cum esse ex aspernatur labore illo nesciunt
+                molestiae nam beatae, impedit dolorem, sequi error soluta quo vitae reiciendis ducimus magni officia!
             </p>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam laboriosam quo eveniet vitae, porro labore error perferendis itaque dolor a reiciendis maiores quasi natus aspernatur nisi nemo velit in unde!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorum accusamus quis, possimus laudantium, odio ut eos amet ad et sit, harum magnam optio blanditiis. Asperiores voluptates doloremque autem corrupti.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam laboriosam quo eveniet vitae, porro
+                labore error perferendis itaque dolor a reiciendis maiores quasi natus aspernatur nisi nemo velit in
+                unde!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorum accusamus quis, possimus
+                laudantium, odio ut eos amet ad et sit, harum magnam optio blanditiis. Asperiores voluptates doloremque
+                autem corrupti.
             </p>
         </section>
     </main>
 
     <script>
-        function clickMenu(){
-            
-                if(itens.style.display == 'block'){
-                        itens.style.display = 'none'
-                }
-                else{
-                    itens.style.display = 'block'
-                }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }
+            else {
+                itens.style.display = 'none'
+            }
         }
+
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            }
+            
+            else {
+                itens.style.display = 'block'
+            }
+
+        }
+
+
     </script>
-    
+
 </body>
+
 </html>

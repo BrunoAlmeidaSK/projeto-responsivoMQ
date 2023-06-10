@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* A partir de 768px começa a mostrar o menu para telas grandes */
+@media screen and (min-width: 768px) {
+    span#burguer{
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+
+    menu > ul > li{
+        display: inline-block;
+    }
+
+    main{
+        width: 768px;
+    }
+}
